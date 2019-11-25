@@ -31,7 +31,8 @@ function draw() {
 }
 
 class Segment {
-    nums = [0xFE, 0xB0, 0xED, 0xF9, 0xB3, 0xDB, 0xDF, 0xF0, 0xFF, 0xFB];
+    // nums = [0xFE, 0xB0, 0xED, 0xF9, 0xB3, 0xDB, 0xDF, 0xF0, 0xFF, 0xFB];
+	nums = [0x7E, 0x30, 0x6D, 0x79, 0x33, 0x5B, 0x5F, 0x70, 0x7F, 0x7B];
     length = 98;
 	width = 18;
 
@@ -70,8 +71,8 @@ class Segment {
 	  
 	  // DP
 	  if (this.position % 2 !== 0 && this.position <= 4) {
-	  	this.getDot(200, 100, val, 7);	
-	  	this.getDot(200, 200, val, 7);
+	  	this.getDot(200, 100);
+	  	this.getDot(200, 200);
 	  }
 
 	  this.getBinary(60, 350, val);
@@ -88,8 +89,8 @@ class Segment {
 	  rect(offset + this.calculateIndent(), height+20, this.width, this.length, 10, 10);
 	}
 
-	getDot(offset, height, val, seg) {
-	  fill(this.getColor(val, seg));
+	getDot(offset, height) {
+	  fill(color(255, 0, 0));
 	  rect(offset + this.calculateIndent(), height+20, 20, 20, 10, 10);
 	}
 
