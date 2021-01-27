@@ -4,7 +4,7 @@
 segments = [];
 
 function setup() {
-  createCanvas(1300, 400);
+  createCanvas(windowWidth, windowHeight);
 
   segments.push(new Segment(0));
   segments.push(new Segment(1));
@@ -15,9 +15,13 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(60);
 
   for(let i = 0; i < segments.length; i++) {
     segments[i].sevenSegments();	
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

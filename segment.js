@@ -10,7 +10,7 @@ class Segment {
 
 	getColor(val, shift) {
 	  let r = 255;
-	  let a = 40 + 255 * ((val >> shift) & 1);
+	  let a = 25 + 255 * ((val >> shift) & 1);
 	  return color(r, 0, 0, a);
 	}
 
